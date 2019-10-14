@@ -8,37 +8,23 @@ RF24 radio(9, 8);  // CE, CSN
 
 //address through which two modules communicate.
 const byte address[6] = "00001";
-int key = 2;
-int x_key = A0;
-int y_key = A2;
-int x_pos;
-int y_pos;
 
 void setup()
 {
   radio.begin();
-  Serial.begin(9600);
   
   //set the address
   radio.openWritingPipe(address);
   
   //Set module as transmitter
   radio.stopListening();
-  pinMode(key, INPUT);
-  digitalWrite(key, HIGH);
-
-  pinMode(x_key, INPUT);
-  pinMode(y_key, INPUT);
-
-  
 }
 void loop()
 {
+  int left=map(analogRead(A0), 0, 1023, 0, 511);
+  int right=map(analogRead(A1), 0, 1023, 0, 511);
+  int power[2]={left,right};
   //Send message to receiver
-  const char text[] = "Hello Finn";
-  x_pos = analogRead(x_key);
-  y_pos = analogRead(y_key);
-  int sendvalue[2]={x_pos, y_pos};
-  radio.write(&sendvalue, sizeof(sendvalue));
-  Serial.print(x_pos);
-  Serial.print("   ");
+  radio.write(&power, sizeof(power));
+
+}
