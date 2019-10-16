@@ -23,6 +23,7 @@ The next step was to choose one of the following projects collected and further 
 With the information documented, we then begin writing codes for the two Arduino microcontroller. One focus as the transmitter and the other acting as the receiver. While assembling the basic components together for the time being to enable both of the microcontrollers to receive and transmit each other. The basic assembly for the two is an Arduino microcontroller connected to nRF24L01+ with wire jumpers.
 
 **Example:**
+
 ![](https://lh3.googleusercontent.com/fF9rLrGbamiUOGGto4ndjONKobN3X-onqxSGObLJTUAaIL-5gHGTvPUwHWqW03xStEy1CX7Bz6WMYQ266o1zD1PnA4if5xR0Qdk6yGrGQL1uiOPDbRWx8ojrN9x1uJylXrCFGMlQ)
 
 ### Code for Transmitter:
