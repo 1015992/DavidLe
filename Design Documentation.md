@@ -61,8 +61,15 @@ The code used for the programming
 **Prototype:**
 
 The first design was to create a general basis of how the entire project would operate at its barebone. With problems being its size and disorganised wire placement.
-			
-	
+
+![Image of prototype car](https://lh3.googleusercontent.com/xmmg3h5KiVNMaKrxt0gBy1_kRoaD4RqU7jaEgQXxxDsLHPVf32ZZOR0XTRXL_5lkpuoH7PAHCBOTjtR0JyoO0ySVrL7HsphbxYeA6TtM)
+
+![Image of prototype controller](https://lh5.googleusercontent.com/2JDCVauAufkY8AFsIQ3QJhv3eNhuuaXeI6UI-ZZBMP9R6M6vlf5d-011caKPOz9wjekdkEsubLNiASWUnBR_GGpXUR9Fbw17BL9nAOIL)
+
 **Final build:**
 
 A refined design from the prototype to be easy to maneuver around and far more organised in the connection of wires.
+
+![Image of final design car](https://lh4.googleusercontent.com/WI29Acos1xYweX53C5NYl_4BEedGdXePrMCYnP-FnZgGrgLLLcN6ur62rFWBoOIVfjzJNRWvO71VcYvMfSDg5ivuTNVsYJdT79oJaJMy)
+
+![](https://lh5.googleusercontent.com/HuhknWzIud4yJwnWf03Gi2t_JKxjU5ZQM2y488PWGQnVh07MX8F0rCVWDQqTQuCO_-iYihExx79QQM9p0romAxy8Q4HG7fB9LNmCrqrd)
