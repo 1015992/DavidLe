@@ -4,24 +4,23 @@
 The idea of making a wireless vehicle is to show the general public how data transmitted from one controller can be utilised in allowing the receiving end to drive the mini vehicle. Understanding the workings of submitting data effectively at a distance. Developing a vehicle that is remotely controlled, holding basic driving mechanics, controlling electronics and motors. The end result would be a joystick controller sending information to a small Lego vehicle to drive forward.
 
 ### Hardware Required:
-- Arduino Uno x2
+- Arduino x2
 - Joystick x2
-- 5v cpacitor x2
 - DC Motor x2
 - Wheels x3
-- Battery capacity
+- Batteries (9V)
 - Jump wires
-- Lego pieces
 - nRF24L01+ 2x (Wireless modules)
 - Antenna (attachment) 2x
 - H-Bridge
 - Breadboards
+- Chassis (Vehicle framework)
 
 ### Construct:
-To begin you need to create a basic construct of a vehicle through the use of lego pieces. The structure should be able to hold the arduino, breadboard and the battery capacity in place. Held together with rubber bands keeping it in place on the vehicle.
+To begin you need to use the chassis as the basic construct of a vehicle. The structure should be able to hold the arduino, breadboard and the batteries in place. Held together with stickytape in keeping it in place on the vehicle.
 
 ### Circuit:
-The circuit operates using two nRF24L01+ (wireless modules) acting as a transmitter and receiver. These work by using radio frequency (if the standard 2.4GHz) to achieve transmitting data from one point to another. Which the wires are connected onto the arduino pins, allowing the CSN pin to be set on standby and CE on transmitter when coded. Enabling the modules to communicate on a frequency, on seperate arduino microcontrollers. Allowing to change the property on one module to act as a transmitter or a receiver when coded. Not only that but it is amplify by a 5v capacitor expanding the volt circulating the wires. With the wires connected to the breadboard to the arduino to the wireless module. All organised using breadboards.
+The circuit operates using two nRF24L01+ (wireless modules) acting as a transmitter and receiver. These work by using radio frequency (if the standard 2.4GHz) to achieve transmitting data from one point to another. Which the wires are connected onto the arduino pins, allowing the CSN pin to be set on standby and CE on transmitter when coded. Enabling the modules to communicate on a frequency, on seperate arduino microcontrollers. Allowing to change the property on one module to act as a transmitter or a receiver when coded.  With the wires connected to the breadboard to the arduino to the wireless module. All organised using breadboards.
 
 Focusing on the transmitter side, the two joysticks has two connectors one horizontal (X-axis) and one vertical (Y-axis) which are connected to the arduino analog inputs. Allowing data from the joysticks to be transmitted from the transmitter to the receiver. Using the data received to then inform through the H-bridge to the DC motors the amount of electricity sent.
 
@@ -130,7 +129,7 @@ side=text[1];
 ```
 Within that is another if statement. That statement would be true when the variable is less than 0, else another if statement takes place seeing if the same variable is greater or equal to 0. When either of them are true a local variable is assigned to the variable, manipulating it to be a float data type. For the first if statement, the variable is multiplied by  negative one to then be divided by a float function set to 255. This float function converts the value into a float data type. For the second if statement, manipulate similar however, the variable is multiplied by a positive while the rest of the calculation is still the same.
 
-
+________________________________
 ```
 if(forward<0)
     {
