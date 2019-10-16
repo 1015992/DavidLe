@@ -166,7 +166,8 @@ For the vehicle, as seen in the image below should have the main motor with the 
 
 With the construction with the physical component finish, rework with the code sketch is in need, as it is actually inefficient in its current state. Able to only move forward at a different speed for each of the motors, and it doesn’t have a stationary state.
 
-
+![](https://lh6.googleusercontent.com/1T8-Z4yBRNSYx7th9YlFxiWmDF6qGX3RuWlMfnTs3_42tzj9Nm09iadjmMiju74HMVOGaqyUTGqv0iLry1hejflUSSPyHaYycN4if98K)
+![](https://lh6.googleusercontent.com/jrGMsWMMGF5cEI57GR5-BvENDcnDswQkIfdgscVVzqi2fWtKxxB_8FgI_OZL8Oc0av4eR8_qOKJXqpIgnwpcXyvQ_KWuG9xA8SxUSVNB)
 
 **Final code Draft:**
 
