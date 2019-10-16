@@ -1,13 +1,13 @@
-Log 1:
+## Log 1:
 
 Accumulate various ideas that are viable to the levels of a year 11 project or more. However, the project had to be created within a given deadline. Holding a description that conveys the requirement to successfully complete the project main function.
 
 **Example:**
 
 Mimic robot: Follow made movements from the user for each step, which will loop through the step given.
+![](https://lh3.googleusercontent.com/vQN5RUWKrencFo3f2Pjouw17HYzpaDDwxwlCICuR4VJL14CYktL6OIV1HncNukX8YsK8EXmbB1erUeV4TkZYRnPnsXA_1e_ZIWPmawOyN9NKRedlXIzP7kZ__pLvJL7Rf7zAGLjs)
 
-
-Log 2:
+## Log 2:
 
 The next step was to choose one of the following projects collected and further research tutorials and examples that would allow a deeper understanding. The project chosen to continue to the next step being a remote control vehicle. With the various components used for the project to function successfully, and codes needed to be understood beforehand to enable in operating the project with no malfunction. Documenting all of the components in a list of each function and the purpose of using them.
 
@@ -18,13 +18,14 @@ The next step was to choose one of the following projects collected and further 
 * radio.begin()
   * Initialize the modules to begin to communicate.
 
-Log 3:
+## Log 3:
 
 With the information documented, we then begin writing codes for the two Arduino microcontroller. One focus as the transmitter and the other acting as the receiver. While assembling the basic components together for the time being to enable both of the microcontrollers to receive and transmit each other. The basic assembly for the two is an Arduino microcontroller connected to nRF24L01+ with wire jumpers.
 
 **Example:**
+![](https://lh3.googleusercontent.com/fF9rLrGbamiUOGGto4ndjONKobN3X-onqxSGObLJTUAaIL-5gHGTvPUwHWqW03xStEy1CX7Bz6WMYQ266o1zD1PnA4if5xR0Qdk6yGrGQL1uiOPDbRWx8ojrN9x1uJylXrCFGMlQ)
 
-Code for Transmitter:
+### Code for Transmitter:
 ```
 //Include Libraries
 #include <SPI.h>
@@ -48,7 +49,7 @@ void setup()
   radio.startListening();
 }
 ```
-Log 4:
+## Log 4:
 
 **Construct a prototype -**
 
@@ -56,7 +57,7 @@ After understanding how all of the codes and components function in an enclosed 
 
 **Draft code sketch:**
 
-Transmitter - 
+### Transmitter - 
 ```
 //Include Libraries
 #include <SPI.h>
@@ -107,10 +108,54 @@ void loop()
 }
 ```
 
-Receiver -
+### Receiver -
+```
+//Include Libraries
+#include <SPI.h>
+#include <nRF24L01.h>
+#include <RF24.h>
+//create an RF24 object
+RF24 radio(9, 8);  // CE, CSN
+//address through which two modules communicate.
+const byte address[6] = "00001";
+void setup()
+{
+  while (!Serial);
+	Serial.begin(9600);
+ 
+  radio.begin();
+ 
+  //set the address
+  radio.openReadingPipe(0, address);
+ 
+  //Set module as receiver
+  radio.startListening();
+  pinMode(3, OUTPUT);
+  pinMode(5, OUTPUT);
+}
+int leftSpeed=0;
+int rightSpeed=0;
+bool on=false;
+bool forward=true;
 
-
-Log 5:
+void loop()
+{
+  //Read the data if available in buffer
+  if (radio.available())
+  {
+	int values[2]={};
+	radio.read(&values, sizeof(values));
+	
+	Serial.println(values[0]);
+	Serial.println(values[1]);
+	
+	analogWrite(3, values[0]);
+	analogWrite(5, values[1]);
+  }
+ 
+}
+```
+## Log 5:
 
 **Construct the final design:**
 
