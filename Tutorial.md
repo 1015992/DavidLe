@@ -129,7 +129,7 @@ side=text[1];
 ```
 Within that is another if statement. That statement would be true when the variable is less than 0, else another if statement takes place seeing if the same variable is greater or equal to 0. When either of them are true a local variable is assigned to the variable, manipulating it to be a float data type. For the first if statement, the variable is multiplied by  negative one to then be divided by a float function set to 255. This float function converts the value into a float data type. For the second if statement, manipulate similar however, the variable is multiplied by a positive while the rest of the calculation is still the same.
 
-________________________________
+_________________55_______________
 ```
 if(forward<0)
     {
