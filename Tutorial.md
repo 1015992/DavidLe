@@ -127,9 +127,11 @@ radio.read(&text, sizeof(text));
 forward=text[0];
 side=text[1];
 ```
-Within that is another if statement. That statement would be true when the variable is less than 0, else another if statement takes place seeing if the same variable is greater or equal to 0. When either of them are true a local variable is assigned to the variable, manipulating it to be a float data type. For the first if statement, the variable is multiplied by  negative one to then be divided by a float function set to 255. This float function converts the value into a float data type. For the second if statement, manipulate similar however, the variable is multiplied by a positive while the rest of the calculation is still the same.
+Within that is another if statement. That statement would be true when the variable is less than 0. When it is true a local variable is then assigned to the stated variable, manipulating it to be a float data type. The variable is multiplied by -1 to then be divided by a float function set to 225 (converts values into a float data type).
 
-More information required:
+Which leads to another if statement in place, stating if the variable is less than 0. If it’s true then a section of code is processed. With the stated variable manipulated by first summing  the variable and value 255, before multiplied by 1 and then divided by float function set to value 255. Setting the data type to float. Then functions are used to activate the motor wheels, sending the value with the analogWrite function to necessary pin number (channel_a_enable). Calculated with a variable multiplied by 255. Along with digitalWrite another two pins to set the direction the wheels rotate. First digitalWrite mode set to “LOW” and the second digitalWrite set to “HIGH”. Similar list of code however, the analogWrite  is multiplied by the manipulated variable, and the order of digitalWrite modes is reversed for another list of variables.
+
+Another alternative if statement when the statement is false. If the variable is greater or equal to 0 then it true. Which the section is similar to the previous section of code however the local float variable is multiplied with the first analog function.
 ```
 if(forward<0)
     {
@@ -157,7 +159,13 @@ if(forward<0)
         digitalWrite( channel_b_input_4, LOW);
       }
     }
-    else if(forward>=0)
+```
+More information:
+https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/
+
+Going with the same list of code previously as an alternative if statement. With the only alteration with the mode for each of the digitalWrite being the opposite from the previous section of codes.
+```
+else if(forward>=0)
     {
       float power=forward*1/float(255);
       if(side<0)
@@ -185,6 +193,7 @@ if(forward<0)
     }
   }
 ```
+
 More information:
 
 https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/
