@@ -4,7 +4,7 @@
 Examining how the component operates in further depth.
 
 ## Component:
-The transceiver module 
+nRF24L01+ is a transceiver module that transsfer data, allowing comunicatoin between similar trandceiver module.
 
 ![](https://lastminuteengineers.com/wp-content/uploads/2018/07/nRF24L01-PA-LNA-External-Antenna-Wireless-Transceiver-Module.png)
 ![](https://lastminuteengineers.com/wp-content/uploads/2018/07/Pinout-nRF24L01-PA-LNA-External-Antenna-Wireless-Transceiver-Module.png)
