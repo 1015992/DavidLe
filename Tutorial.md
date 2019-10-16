@@ -28,6 +28,8 @@ The DC motors operate in allowing the vehicle to move forward. Connected to the 
 
 ### Code:
 After constructing the circuits based on the design of the diagram given, we start to code two different sketches. Starting off we set up the necessary libraries needed to utilise the wireless modules in sending data. Each library handles a specific role. Implementing <SPI.h> opens up and handle communication with the SPI. Enabling connection to other outlet using the same module. Along with that another two library <nRF24L01.h> and <RF24.h> which will allow full control of the module.
+
+Note: The libraries requires to be downloaded by the link below.
 ```
 #include <SPI.h>
 #include <nRF24L01.h>
